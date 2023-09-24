@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import './HomePage.css';
 
 
 function HomePage() {
@@ -7,12 +8,16 @@ function HomePage() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://randomuser.me/api/?resut=100')
+    fetch('https://randomuser.me/api/?results=100')
       .then((res) => res.json())
       .then((userData) => setUsers(userData.results));
+
   }, []);
 
   const mapUsers = () => {
+
+    console.log(users);
+
     return users.map((user) => (
       <div key={user.login.uuid}>
         <img src={user.picture.large} alt={user.name.first} />
@@ -21,9 +26,9 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <div className="user-grid">
       {mapUsers()}
-    </div>
+       </div>
   );
 }
 
