@@ -1,32 +1,64 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
 .user-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: repeat(20 ,1fr);
-    gap: 10px;
-    align-items: 66%;
-    
+  margin-top: 1%;
+  margin-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  max-width: 66%;
+  gap: 1px;
+}
+.btn btn-primary back-button{
+  margin-right: 0;
+}
+.user-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.user-card img {
+  max-width: 100%; /* Corrected the percentage value */
+  height: auto;
+}
+
+.profile {
+  border: 2px solid gray;
+  padding: 25px;
+}
+
+.btn-group {
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .user-grid {
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns for smaller screens */
+    max-width: 90%; /* Adjust the maximum width */
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .user-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .user-grid {
+    grid-template-columns: repeat(2, 1fr); /* Further adjust for even smaller screens */
   }
-  
-  .user-card img {
-    max-width: 100%;
-    height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .user-grid {
+    grid-template-columns: 1fr; /* Single column layout for very small screens */
   }
-  .profile{
-    border: 2px solid gray;
-    padding: 25px;
-  }
- 
-  .App{
-    font-family: sans-serif;
-    /* text-align: center;
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */ 
-  }
-  
+}

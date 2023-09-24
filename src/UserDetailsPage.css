@@ -1,0 +1,31 @@
+/* UserDetailsPage.css */
+
+.user-details-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.user-details-container img {
+  border-radius: 50%;
+}
+
+.user-details-container p {
+  font-size: 18px;
+  text-align: center; /* Added to center the text */
+}
+
+.user-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Added to center the content horizontally */
+}
+
+.user-contact-info {
+  margin-left: 10px;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Adjusted position to left */
+}
